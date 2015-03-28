@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>The Nana Programmer's Guide</title>
+    <style type="text/css">
+        .auto-style1 {
+            color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+    <table style="font-family:Trebuchet MS;font-size:10pt; width: 100%; position: absolute; left: 0px; border-top-style: none; border-right-style: none; border-left-style: none; top: 0px; border-bottom-style: none;">
+        <tr>
+            <td style="height: 70px; background-color: #ffcc66; text-align: right">
+                <span style="font-size: 16pt"><strong>Nana - a C++ framework project &nbsp;<br />
+                </strong></span>
+                <br />
+                <strong>The Programmer's Guide&nbsp; </strong></td>
+        </tr>
+        <tr>
+            <td style="height: 21px">
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 21px; font-family: Consolas;">
+                <strong><span style="font-size: 16pt">nana::gui::label</span></strong><br />
+                <br />
+                <strong>
+                Description<br />
+                </strong>
+                <br />
+                A label widget. a label widget can dispaly a text string.<br />
+                <br />
+                <strong>Model
+                of<br />
+                </strong>
+                <br />
+                <a href="./widget_window.htm">Widget Window</a>&nbsp;<br />
+                <br />
+                <strong>Public base classes<br />
+                </strong>
+                <br />
+                <a href="./widget_object_widget_tag.htm">
+                class widget_object&lt;widget_tag&gt;: public
+                    widget</a><br />
+                <br />
+                <strong>Typedefs</strong><br />
+                <br />
+                C++ 03<br />
+                <table style="border-right: 1px outset; border-top: 1px outset; border-left: 1px outset;
+                    width: 100%; border-bottom: 1px outset">
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            struct command<br />
+                            {<br />
+&nbsp;&nbsp;&nbsp; enum t{enter, leave, click};<br />
+                            };</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Defines the event type for format listener.</td>
+                    </tr>
+                </table>
+                <br />
+                C++11<br />
+                <table style="border-right: 1px outset; border-top: 1px outset; border-left: 1px outset;
+                    width: 100%; border-bottom: 1px outset">
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            enum class command{ enter, leave, click
+                            };</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Ditto.</td>
+                    </tr>
+                </table>
+                <br />
+                <strong>Members</strong><br />
+                <br />
+                <table style="border-right: 1px outset; border-top: 1px outset; border-left: 1px outset;
+                    width: 100%; border-bottom: 1px outset">
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            label()</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            The construction.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            label(window wd, bool visible)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Creates a label.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            label(window wd, const <a href="../basic_class/rectangle.htm" target="_blank">rectangle</a>&amp; r = rectangle(), bool visible = true)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Ditto.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void format(bool enter_format_mode)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Switchs the format mode of the widget.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void transparent(bool)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Switchs the label widget to the transparent background mode.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            bool transparent() const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            True if the label is transparent background mode.</td>
+                    </tr>
+                </table>
+                <br />
+                C++03<br />
+                <table style="border-right: 1px outset; border-top: 1px outset; border-left: 1px outset;
+                    width: 100%; border-bottom: 1px outset">
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void add_format_listener(const nana::functor&lt;void(command::t, const nana::string&amp;)&gt; &amp; )&nbsp;</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Adds the format listener.</td>
+                    </tr>
+                </table>
+                <br />
+                C++11<br />
+                <table style="border-right: 1px outset; border-top: 1px outset; border-left: 1px outset;
+                    width: 100%; border-bottom: 1px outset">
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void add_format_listener(const std::function&lt;void(command, const nana::string&amp;)&gt;&amp;)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Ditto.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void add_format_listener(std::function&lt;void(command, const nana::string&amp;)&gt; &amp; )</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Ditto.</td>
+                    </tr>
+                </table>
+                <br />
+                <strong>File<br />
+                </strong>
+                <br />
+                nana/gui/widgets/label.hpp<br />
+                <br />
+                <strong>Notes<br />
+                </strong>
+                <br />
+                1. It is not good efficient that the background mode of the label is transparent.<br />
+                <br />
+                2. If the caption of a lable contains a character '\n', the label will hide the
+                character and display the text string after '\n' in a new line.<br />
+                <br />
+                3. The format mode accepts the definition for displaying mutile-style text. For
+                example.<br />
+                <br />
+                <span style="font-family: Courier New">label.format(<strong>true</strong>);<br />
+                    label.caption(STR(<span style="color: #ff0000">"Hello, &lt;bold=true&gt;This is a bold text&lt;/&gt;"</span>));<br />
+                    <img alt="Label with bold text" src="./images/label_bold.png" />&nbsp;<br />
+                    <br />
+                    label.caption(STR(<span style="color: #ff0000">"Hello, &lt;bold=true, color=0xff0000&gt;This
+                        is a bold red text&lt;/&gt;"</span>));<br/>
+                    <img alt="Label with bold red text" src="./images/label_bold_red.png" />&nbsp;<br />
+                    <br />
+                    label.caption(STR(<span style="color: #ff0000">"Hello, &lt;bold=true, color=0xff0000,
+                        font=\"Consolas\"&gt;This is a bold red Consolas text&lt;/&gt;"</span>));<br />
+                    <img alt="Label with bold red Consolas text" src="./images/label_bold_red_consolas.png" />&nbsp;<br />
+                    <br />
+                    label.caption(STR(<span style="color: #ff0000">"Hello, &lt;bold=true, color=0xff0000,
+                        font=\"Consolas\", url=\"http://nanapro.sourceforge.net\"&gt;This is a bold red Consolas
+                        text&lt;/&gt;"</span>));<br />
+                    Arrow cursor becomes a hand when the cursor moves over the red text. Meanwhile,
+                    it is open a web browser to open the URL by clicking the red text.<br />
+                <br />
+                <strong>using</strong> <strong>namespace</strong> nana::gui;<br />
+                <br />
+                //void listener(label::command cmd, const nana::string&amp; s) //C++11<br />
+                <strong>void</strong> listener(label::command::t cmd, <strong>const</strong> nana::string&amp; s)<br />
+                {<br />
+&nbsp;&nbsp;&nbsp; if(label::command::click == cmd)<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; msgbox mb(STR(<span class="auto-style1">&quot;target clicked&quot;</span>));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mb&lt;&lt;STR(<span class="auto-style1">&quot;the target \&quot;&quot;</span>)&lt;&lt;s&lt;&lt;<span class="auto-style1">&quot;\&quot; is clicked&quot;</span>;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mb();<br />
+&nbsp;&nbsp;&nbsp; }<br />
+                }<br />
+                <br />
+                <strong>int</strong> main()<br />
+                {<br />
+&nbsp;&nbsp;&nbsp; form fm;<br />
+&nbsp;&nbsp;&nbsp; label lab(fm, nana::rectangle(0, 0, 100, 40));<br />
+&nbsp;&nbsp;&nbsp; lab.format(true);<br />
+&nbsp;&nbsp;&nbsp; lab.add_format_listener(listener);<br />
+&nbsp;&nbsp;&nbsp; lab.caption(STR(<span class="auto-style1">&quot;Click &lt;color=0xFF, target=\&quot;target id\&quot;&gt;here&lt;/&gt;&quot;</span>));<br />
+&nbsp;&nbsp;&nbsp; fm.show();<br />
+&nbsp;&nbsp;&nbsp; exec();<br />
+                }<br />
+                    
+                </span>
+                <br />
+                <strong>See also</strong><br />
+                <br />
+                None.<br />
+                <br />
+                <hr />
+                Move to <a href="../index.htm">The Nana Programmer's Guide Main Page</a></td>
+        </tr>
+        <tr>
+            <td style="height: 21px">
+            </td>
+        </tr>
+    </table>
+
+    
+    
+
+</body>
+</html>

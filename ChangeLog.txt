@@ -1,0 +1,499 @@
+Nana C++ Library
+==============
+Version: 0.5.2
+Bugfix:
+	* fixed CP#6(a mouse_up appcrash).
+	* A compiling error in PNG for Nana.C++11
+	* fixed 2 bugs in nana::gui::place,
+Feature:
+	* A new sizing event.
+	* A new first_change event for textbox.
+	* A new API::refresh_window_tree for updating the specified window and its chilren windows.
+	* Init file for filebox.
+
+==============
+Version: 0.5.1
+Bugfix:
+	* fixed SF#3(name sort in filebox).
+	* fixed SF#4(Introducing An intuitive show() method)
+	* fixed SF#5(accessing owner of a modal window).
+	* fixed CP#3(caret in textbox floats)
+	* fixed CP#5(menu in two-display laptop)
+	* fixed returning empty string by combox::caption().
+	* fixed returning without last character by form::caption().
+	* fixed a bug that drawing::draw(const draw_fn_t&) does not work in Nana.C++03.
+	* fixed the textbox that does not display texts when its height is less than the font.
+	* fixed a crash combox editing.
+	* A compiling error under Linux.
+	* class animation does not destroy the associated resource after closing the window.
+	* fixed a crash in x64 caused by std::size_t-to-unsigned conversion issue.
+Feature:
+	* A new move event.
+	* Added show() method for filebox and msgbox, it is an alternative to operator().
+	* A Ctrl-X support for textbox and combox.
+	* Improved class place for new features.
+
+==============
+Version: 0.5
+Bugfix:
+	* can't change the background color of button.
+	* fixed a crash when throwing an exception in an event callback.
+	* fixed the behavior of categorize's drop-down listbox in Nana.C++03.
+	* fixed CP#2 issue.
+	* fixed the API::window_caption() can't return the text of textbox.
+	* fixed a bug of pixel_buffer.
+Feature:
+	* Changed the license to the Boost Software License.
+	* refactored code for the sort compare of listbox in favor of "strick" ordering.
+	* introduced a new class place for automatic layout.
+	* introduced a new animation framework.
+	* text alignment is supported by label.
+	* the class auto_buf is deprecated in Nana.C++11.
+	* improved rendering algorithm of transparent window.
+
+==============
+Version: 0.4.3
+Bugfix:
+	* fixed sf.ticket#1.
+	* fixed the bad caret position and a scrolling error in textbox.
+	* implemented create_child_window() for X11.
+	* fixed a crash error when MotionNotify at an invalid position under Linux.
+Feature:
+	* new load/store methods for textbox to load/write text from/to a file.
+	* a new wait_for_finished() method for threads::pool to wait for the finish of all tasks.
+
+==============
+Version: 0.4.2
+Bugfix:
+	* fixed a compiling error in image_png if the support of PNG is enabled.
+	* fixed a bug that only nullptr can be accepted by the owner of filebox.
+	* the code::blocks build project of Nana is error under Linux.
+	* fixed a bad behavior of menu::max_pixels(), it only accepts the value which is less than 100.
+
+Feature:
+	* enables the NANA_MINGW automatically.
+
+==============
+Version: 0.4.1
+Bugfix:
+	* Fixed a bug that GUI can't be operable by mouse through x64 under Windows.
+	* Enabled the support for MinGW.
+	* Fixed the flickering caret issue.
+
+Feature:
+	* Substituted std::shared_ptr for class template nana::refer
+
+==============
+Version: 0.4
+Bugfix:
+	* A Nana.C++03 compiling error in GCC3.4.
+	* A reported bug SF#2
+	* Fixed a frame exposing error in WindowManager.
+	* Fixed a crash error by the mouse move event.
+	* Fixed a crash casued by a int overflow in calculating overlap area.
+	* Fixed a show() state error. The window may not be hided after a ShowWindow() call in Windows.
+	* Fixed a scroll error.
+
+Feature:
+	* Removed some compiler warnings on x64 build.
+	* Improved the invocation of image processing algorithmn for pixel_buffer.
+	* Add a value_changed extra events for both slider and scroll.
+	* Add selected and checked extra events for listbox.
+	* A new draw method for class drawing.
+	* A user-defined menu item renderer.
+	* Improved the support of multithreading.
+	* Improved the thread pool.
+	* Deleted the implementation of locks for Nana.C++03
+	* Introduced a C++11-like mutex and condition_variable for Nana.C++03
+
+==============
+Version: 0.3.1
+Bugfix:
+	* Fixed some memory leaks in combox, textbox, treebox and categorizer.
+	* A crash error under WinXP if it is built by VC10 or later.
+	* A crash error of stack overflow when a new window is creating in the mouse_enter or mouse_leave event.
+	* Many bugs fixes for Linux.
+
+Feature:
+	* A new concept of AnyObjective.
+	* A new class resolver is used to resolute an object of specified type for a listbox item.
+	* A new filebox class.
+	* Some improvements for widgets
+
+==============
+Version: 0.3
+Bugfix:
+	* text_renderer draws a text at wrong x position when the text is line changed.
+	* [MSW]In some situations, form.show() still blocks the execution though the calling in the window thread.
+	* A Memory leak in Listbox and float_listbox.
+
+Feature:
+	* The linux and win32 packages are merged.
+	* Introduced a new charset class for character code conversion, and the function nana::stringset_cast() is deprecated.
+	* Modifications that produced by Simon Berger:
+		fixed GCC warnings on -Wall(added paranoid default cases to all switches, some may throw).
+		made timer_handle stuff 64-bit safe on Linux.
+	* A new nana::audio::player class for playing an audio file. It only supprots PCM wave file now.
+	* Improved combox widget.
+
+==============
+Version: 0.2.5
+Bugfix:
+	* SF#1
+	* text_renderer renders wrong x position if a text is line changed.
+	* missing text rendering by calling caption()
+	* A crash under Linux when creating a tooltip floating window.
+
+Feature:
+	* Nana.C++11 is available
+	* Refining the constructors and create() methods of a widget.
+
+==============
+Version: 0.2.4
+Bugfix:
+	* Imperfect of checkbox background image.
+Feature:
+	* Introduced a new class unicode_bidi for the support of bidirectional language.
+	* Implemented the 4/2/1-bit bitmap format.
+	* Improved some widgets, such as checkbox, listbox, combox and textbox.
+
+==============
+Version: 0.2.3
+Bugfix:
+	* fixed a crash caused by the invalid minimize tracking size.
+	* Fixed a bug that a handle of tray is not deleted after removing the tray.
+	* Fixed the caption of category widget is not changed after selecting a new item.
+
+Feature:
+	* Added a msgbox class for prompting message.
+	* Added new interfaces for window icon.
+	* Introduced a method for calculating text extent size into label widget.
+	* Improved the event manager.
+	* Improved some implementations and performance optimized.
+	* Improved the GUI support of Linux(X11), such as Drag and drop event, dataexch and so on.
+
+==============
+Version: 0.2.2
+Bugfix:
+	* API::exit() which recloseing a window is fixed by Segery Bromirskiy.
+Feature:
+	* Added dynamic effects.
+	* New image processing algorithm interfaces.
+	* Many improvements
+	
+==============
+Version: 0.2.1
+Bugfix:
+	* Fixed a blocking that set focus in out thread.
+	* Fixed a bug that nana::gui::API::exit closes all forms.
+	* Fixed a bug that a memory leak when deleting an event handler. 
+	
+Feature:
+	* Added a new expose event.
+	* Improved the checkbox for radio style, and added a new class radio_group for automatically check of radio checkbox.
+	* Added the support for BMP under both Windows and Linux platform.
+	* Improved the GUI support of Linux(X11)
+	* Improved the implementation of locks under Linux.
+	* Introduced a machanism for configuration of image processing algorithm.
+
+==============
+Version: 0.2
+Bugfix:
+	* Fixed a crash under Windows XP if the program was built by SDK for vista and later.
+
+Feature:
+	* Improved template class functor.
+	* Improved some widgets.
+	* A support for PNG.
+
+==============
+Version: 0.1.17
+Bugfix:
+	* Fixed the npos option while an item in combox's droplist is not selected.
+	* Fixed a deadlock from setting the caption of form in other thread.
+	* Fixed the losing event_window handle when an new event is genereted in an event handler in core of GUI.
+	* A patch for x64 by Hiroshi Seki.
+Feature:
+	* Improved the functions of layout gird class.
+	* Improved the functions of button class.
+	* Improved treebox widget.
+	* Introduced a new categorize widget.
+
+==============
+Version: 0.1.16
+Feature:
+	* Added a new gird class for layout management.
+	* Improved for working with C++11.
+
+==============
+Version: 0.1.15
+Bugfix:
+	* A bug about focus that switches between two native windows.
+	* The mouse_up event is ignored if a root window is created during the mouse_down event. But if the cursor is still above the mouse_down window, the mouse_up event should not be ignored.
+	* The resize event would not refresh the window if the update state of event window is none.
+	* A bug of coordinate between a root window and its owner window.
+	* A bug that position of background image of button.
+	* A bug about text output of label in format mode.
+	
+Feature:
+	* Provided some function objects for event handle.
+	* Added a method to fetch the text of item in combox drop list.
+	* Added some methods to copy/paste/delete/select/unselect the text of textbox.
+	* Added a method to fetch the selected node of treebox.
+	
+
+==============
+Version: 0.1.14
+BUGFIX:
+	* Some bugs.
+Feature:
+	* Enhanced reanderer.
+	* A function that takes a return value is supported by event manager.
+	* Introduced a new widget - nested form.
+
+==============
+Version: 0.1.13
+BUGFIX:
+	* Fixed a bug that caused a crash when inserting a node in the empty node in data structure used by nana::gui::treebox.
+Feature:
+	* Enhanced the nana::gui::button,  and removed the class pushbutton as combining the pushbutton with button.
+	* Check state is supported by nana::gui::listbox.
+	* The transparent background is supported by nana::gui::panel.
+	* The stretchable background image is supported by nana::gui::picture.
+	* Enhanced the nana::gui::tabbar.
+	* Introduced nana::gui::auto_cursor for defining the window cursor.
+	* Improved the nana::paint::font for more features.
+	* Enabled the tracking size of widgets.
+
+==============
+Version: 0.1.12
+BUGFIX:
+	* The make_glass_background copys the invisible window to the glass buffer.
+	* Openning a modal window which thread is different with owner's blocks the thread when active the owner.
+	* event_manager did not delete the handler object while umake an event_handle.
+	* The default native font issue.
+	* Moving a widget in other thread blocks the caller thread. Deliver the operation to its window message thread.
+	* If a float_lsitbox is popuped, it modifies the selected index into npos if any item is not selected. This would cause the option of combox as a wrong value.
+	* Fixed the menu check_option issue. Checking a CheckOption item should uncheck other checked items.
+
+Feature:
+	* The widget provides a method to initialize the visible while it is creating.
+	* nana::gui::label supports the format text to enable displaying defferent font/size/color in a string.
+	* nana::gui::picture the transparent background is supported.
+	* nana::gui::textbox supports the mask character for entering a value for password and display these as mask charactor.
+	* Refectoring the logic of window drawing, introduce a new mothed instead of the ask_refresh and decl_update.
+	* Redesign the event_window, redrawing a window does not refer to this state.
+	* Improved some widgets and components, button, progressbar, slider, cursor, font, threads::pool,
+	* Introduced a new widget. A login framework.
+	* Redesigned the locks of thread.
+
+==============
+Version: 0.1.11
+BUGFIX:
+	* Fixed the glass window notification circuit.
+	* A glass window copys a root buffer for transparent is not correct. Fixed is bug by introducing a new function called make_glass_background.
+	* Can't pop a pushbutton.
+	* Creating a window before tow event pumps in same thread(i.g modal_window then exec) is not correct since the bedrock removes thread context when an event pump is finished. Fixed this bug by checking the number of windows before removing the thread context.
+	* A resource leaks by deleting or modifying a tray. The icon set up to tray is not deleted.
+	* Setting the stretch of the nana::gui::picture is not refreshing immediately.
+
+Feature:
+	* Introduced a new function called API::make_glass_background, it is used for copying a parent buffer of glass to its background for transparent.
+	* Introduced a nana::gui::slider for manipulating progress.
+	* nana::paint::graphics provides a round_rectangle for drawing round rectangle shape and a save_as_file for save the graphics to a file.
+	* Improved some widgets.
+
+==============
+Version: 0.1.10.1
+BUGFIX:
+	* Fixed a bug about keyboard focus.
+	* Fixed a bug that nana::refer may cause a memory leak if it refers to a pointer when it is destroyed.
+	* Fixed a bug that bedrock may not release the thread_context object when event loop is finished. 
+
+Feature:
+	* Introduced a nana::gui::tray for taskbar tray operation.
+	* Introduced a new API::fullscreen for makeing a window fit with the fullscreen when it is maximized.
+	* Improved the menu that closing a menu when mouse clicks other window.
+	* Improved many widgets, checkbox, picture.
+
+==============
+Version: 0.1.10
+BUGFIX:
+	* Fixed a bug that the window created by nana::gui::menu may be deleted tiwce after answering the user event.
+	* Fixed a bug that the menu pops up a sub menu in a wrong position.
+	* Fixed a bug that a window did not notify the glass window, and the glass window would not be drawn.
+	* Fixed a bug that resource leaks by nana::paint::graphics.
+	* Fixed a bug that two nana::gui::API::modal_window calls in sequential causes a bad event loop in Windows.
+	* Fixed a resource leak caused by nana::paint::font.
+
+Feature:
+	* Introduced a method for nana::gui::listbox to return the number of category item.
+	* Introduced a nana::date(nana/datetime.hpp) for date operation.
+	* Introduced a nana::gui::date_chooser for date operation.
+
+==============
+Version: 0.1.9.3
+BUGFIX:
+	* Fixed a bug that nana::paint::graphics(unsigned width, unsigned height) had not initilized the graphics handle.
+	* Fixed a bug that a kernal deadlock might be caused by calling Win32 API MoveWindow in other thread.
+	* Fixed bugs that the backgrond and foreground color of nana::gui::textbox were immutable. 
+
+Feature:
+	* Enhanced the feature for multi-thread.
+	* Enhanced the nana.GUI internal system.
+	* Enhanced the nana::gui::treebox widget.
+
+==============
+Version: 0.1.9.2
+BUGFIX:
+	* Fixed some memory leaks of nana::paint::image.
+Feature:
+	* Enhanced the tooltip for multiply text lines.
+
+==============
+Version: 0.1.9.1
+BUGFIX:
+	* Mapping the bad graphics while window is resizing.
+	* Fixed some bugs of nana::gui::tabbar.
+	* Fixed a bug that nana::paint::detail::blend made a wrong overlap rectangle.
+Feature:
+	* Added a decl_update method for reduceing the redundancy mapping.
+	* Rewritten the nana::gui::combox for new features, such as, float_listbox, editable text and user-defined list item renderer.
+	* Rewritten the nana::gui::listbox for fixing many bugs.
+	* Modified the mouse_wheel event acting on the focus window not the mouse position window.
+
+==============
+Version: 0.1.9
+BUGFIX:
+	* Fixed a bug that create a root window in a wrong position.
+	* Fixed a bug that the scrollbar still makes step when a arrow button is not enabled.
+	* Fixed a bug that visible state of caret.
+	* Fixed a bug that a model window can not be received WM_KEYDOWN and WM_KEYUP, it is the same as 0.1.8.1's bugfix.
+	* Fixed a bug that the owner window may lose focus when a modal window is closed.
+	* Fixed a bug that when enlarging the nana::gui::form, the window is not updated to display on screen.
+Feature:
+	* Improved the nana::gui::tabbar.
+	* Improved the nana::gui::menu.
+	* Improved the nana::gui::label for changing a new line automatically.
+	* Improved the nana::gui::button that responds by a click event when pressing enter. and move a focus when pressing arrow key.
+	* Improved the efficiency of nana::gui.
+	* Support the mouse_drop event for drag and drop.
+	* Introduced two new widgets.
+	*	nana::gui::tooltip for popuping a tip text window.
+	*	nana::gui::toolbar.
+	* A new commpenent: nana::filesystem::path.
+	
+==============
+Version: 0.1.8.3
+BUGFIX:
+	* Fixed a bug about the overlap between caret and its visible area.
+	* Fixed a bug about refresh, the ask_refresh will be set zero if a non-event window forcely refresh. This would cause a widget not refreshed after other widget is refreshed forcely and event process finished.
+	* Fixed a bug that eat-tabstop does not work.
+Feature:
+	* A function object without const eventinfo& parameter is allowed to be registered in the event manager.
+	* Improved the scrollbar.
+
+==============
+Version: 0.1.8.2
+
+BUGFIX:
+	* Fixed a bug that a widget is not a root widget, but it still forwards the focus to the owner native window.
+	* Fixed some bugs of nana::gui::textbox, e.g, scrolling the text, moving selected text.
+Feature:
+	* Improved take_active, the focus will forward to active_window if the window is not take_active.
+
+==============
+Version: 0.1.8.1
+
+BUGFIX:
+	* Fixed a bug that erasing an item in listbox may cause a crash.
+	* Fixed a bug that a model window can not receive WM_CHAR.
+	* Fixed a bug that can not cancel selection if select all.
+Feature:
+	* Improved listbox.
+	* Improved nana::gui::drawing.
+
+==============
+Version: 0.1.8
+
+BUGFIX:
+	* Fixed a bug that changing a tabstop window doesn't cause a refreshing.
+	* Fixed a bug that nana::gui::progressbar ingores a refreshing if its value is set by zero after changing the style from unknown into known.
+	* Fixed a bug that releasing grab by nana::gui::API::capture_window may be failed.
+	* Fixed a bug that event_manager does not generate the resize event.
+	* Fixed a bug that flickers background when resizing window.
+	* Fixed a bug in nana::refer<>, it still holds the resource after it released if the ref-count is not empty.
+	* Fixed a bug about the scrollbars in nana::gui::listbox.
+
+Feature:
+	* Improved some controls tabstop and shortcut keys, such as button, combobox.
+	* Improved listbox and textbox.
+	* Introduced a helper class nana::gui::appear for making the appearance of form more readable and maintainable.
+	* Introduced a component for layout - nana::gui::edge_keeper.
+	* Introduced many new widgets.
+	*	lite_widget is used for non-graphics-buffer widgets.
+	*	a new widget for placing widgets, nana::gui::panel<>.
+	*	menu and menubar widget.
+	*	a displaying tree-view hierarchy of nodes widget, nana::gui::treebox.
+	*	a tab widget, nana::gui::tabbar.
+	* Introduced the shortcut key mechanism.
+
+==============
+Version: 0.1.7
+
+BUGFIX:
+	* Fixed a bug that nana::paint::graphics::line may ignore if the parameters present a point.
+	* Fixed a bug that the mouse event will be lost if the event is out of a captured window.
+
+Feature:
+	* Implemented a new widget - nana::gui::combox.
+
+==============
+Version: 0.1.6.2
+
+BUGFIX:
+	* Destroying a frame may cause a crash.
+	* The caret error if the height of textbox is less than a text line height.
+
+Feature:
+	* Enhance the efficiency of nana::system::dataexch.
+
+==============
+Version: 0.1.6.1
+
+BUGFIX:
+	* The caret height of nana::gui::textbox has not been changed while the font is changing.
+	* If a window covers a child of its parent window, the child window would not be displayed while the window sets invisible.
+	* The program may crash while deleting a window. It should delete the copy of a handle after null pointer was assigned to the handle.
+
+==============
+Version: 0.1.6
+
+BUGFIX:
+	* nana::threads::pool::push may throw a std::bad_alloc and cause a memory leak.
+Feature:
+	* Improve the keyboard focus system.
+	* Introduced a nana::system::dataexch for transfer data between applications by Windows Clipboard/X11 Selection.
+	* Implemented a new widget - nana::gui::textbox.
+
+==============
+Version: 0.1.5
+
+BUGFIX:
+	* nana::threads::pool may fail to wake up an idle thread.
+	* nana::gui provides a way for processing the mouse wheel event.
+Feature:
+	* Implemented a new widget - listbox.
+	* Many modifications for cross-platform.
+	
+==============
+Version: 0.1.4
+
+BUGFIX:
+	* nana::threads::thread resource leaks
+	* nana::paint::image memory leaks
+	* nana::gui::progressbar causes an integer division by zero error if the amount of the progressbar is zero
+	* two nana::refer objects perform assigment operation, the original object that left value refers would be ruined.
+
+Feature:
+	* Introduced two methods for setting the font of a widget

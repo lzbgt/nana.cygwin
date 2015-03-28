@@ -1,0 +1,571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>The Nana Programmer's Guide</title>
+    <style type="text/css">
+        .style1
+        {
+            color: #0000FF;
+        }
+        .auto-style1 {
+            color: #009933;
+        }
+        .auto-style2 {
+            color: #FF0000;
+        }
+        .auto-style3 {
+            color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <table style="font-family:Consolas;font-size:10pt; width: 100%; position: absolute; left: 0px; border-top-style: none; border-right-style: none; border-left-style: none; top: 0px; border-bottom-style: none;">
+        <tr>
+            <td style="height: 70px; background-color: #ffcc66; text-align: right">
+                <strong><span style="font-size: 16pt">Nana C++ Library&nbsp;</span><br />
+                A open-source C++ framework project&nbsp; <br />
+                The Programmer's Guide&nbsp; </strong></td>
+        </tr>
+        <tr>
+            <td style="height: 21px">
+            </td>
+        </tr>
+        <tr>
+            <td style="font-family:Consolas;height: 21px">
+                <strong><span style="font-size: 16pt">nana::gui::treebox&lt;typename T&gt;</span></strong><br />
+                <br />
+                <strong>
+                Description<br />
+                </strong>
+                <br />
+                a treebox is a widget that displays a hierarchical list of items, such as the files
+                and directories on a disk. The treebox is a class template, the template parameter
+                T is used for user type, each node in the treebox has an object of T.<br />
+                <br />
+                <strong>Model
+                of<br />
+                </strong>
+                <br />
+                <a href="./widget_window.htm">Widget Window</a>&nbsp;<br />
+                <br />
+                <strong>Public base classes<br />
+                </strong>
+                <br />
+                <a href="./widget_object_widget_tag.htm">class widget_object&lt;widget_tag, DrawerTrigger&gt;:
+                    public
+                widget</a><br />
+                <br />
+                <strong>Typedefs</strong><br />
+                <br />
+                <table style="border-right: 1px outset; border-top: 1px outset; border-left: 1px outset;
+                    width: 100%; border-bottom: 1px outset; font-size: 10pt;">
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            value_type</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            A type that represents the data type stored in a treebox.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            ext_event_type</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            The type of extra event defined by treebox.(See Note 2)</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            node_type</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            A handle type refers to node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            node_image_type</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            The type of state image.</td>
+                    </tr>
+                </table>
+                <br />
+                <strong>Members</strong><br />
+                <br />
+                <table style="border-right: 1px outset; border-top: 1px outset; border-left: 1px outset;
+                    width: 100%; border-bottom: 1px outset; font-size: 10pt;">
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            treebox();</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            The default constructor.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            treebox(window wd, bool visible)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Creates a treebox in a specified window.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            treebox(window wd, const <a href="../basic_class/rectangle.htm" target="_blank">rectangle</a>&amp; r = rectangle(), bool visible = true)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 50%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Creates a treebox with a specified rectangle.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            unsigned children_size(node_type) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Gets the number of a node&#39;s children.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            ext_event_type&amp; ext_event() const&nbsp;</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Retrieves the object of extra events.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void expand(node_type node, bool exp);</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Expand/Contract the node by exp.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void expand(const nana::string&amp; key_path, bool exp);</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Expand/Contract the node by key_path.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            node_type get_child(node_type node) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Gets the first of child of the node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            node_type get_owner(node_type node) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Gets the owner of the node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            node_type get_sibling(node_type node);</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Gets a sibling of the node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            treebox&amp; image(const nana::string&amp; id, const <a href="../paint/image.htm" target="_blank">nana::paint::image</a>&amp;)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Sets an image with a specified id name, the image is used for normal.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            treebox&amp; image(const nana::string&amp; id, const node_image_type&amp;)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Sets the state image with a specified id name.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            node_image_type&amp; image(const nana::string&amp; id) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Retrieves the object of state image by the specified id name.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void image_erase(const nana::string&amp; id)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Erases the state image by the specified id name.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            node_type insert(const nana::string&amp; path_key, const nana::string&amp; title,
+                            value_type value);</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Inserts a new node to treebox, path_key specifies the node hierarchical, title is
+                            used for displaying, value is an user-given data object that assoicated with the
+                            new node. If the key is existing, the function returns the existing node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            node_type insert(node_type node, const nana::string&amp; key, const nana::string&amp;
+                            title, value_type value);</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Inserts a new node to treebox, node is the parent, key specifies the new node, title
+                            is used for displaying, value is an user-given data object that associated with
+                            the new node. If the key is existing, the function returns the existing node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            nana::string key(node_type node) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Gets the key of a node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            bool key(node_type node, const nana::string&amp;);</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Sets the key of a node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            nana::string make_key_path(node_type node, const nana::string&amp; splitter);</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            It returns the key path of node, the splitter splits the each owner of node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            node_type node(const nana::string&amp; keypath)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Gets the node with a specified key path.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void node_image(node_type node, const nana::string&amp; id)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Sets the state image for a node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void remove(node_type);</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Remove a node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void remove(cosnt nana::string&amp; key_path);</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Remove a node that is specified by a key path.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            node_type selected() const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Get the node that is selected.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            nana::string text(node_type node)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Retrieves the text of a node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            bool 
+                            text(node_type node, const nana::string&amp; text)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Sets the text of a node.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            value_type&amp; value(node_type) const;</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 400px; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Gets the value_type data assicating with node. If the node is invalid, it throws
+                            a std::invalid_argument exception.</td>
+                    </tr>
+                    </table>
+                <br />
+                <strong>File</strong><br />
+                <br />
+                nana/gui/widgets/treebox.hpp<br />
+                <br />
+                <strong>Tutorial</strong><br />
+                <br />
+                Loading the directories into the treebox.<br />
+                <br />
+                <img alt="treebox" src="./images/treebox.png" style="font-size: 10pt" /><br />
+                <br />
+                <span style="font-family: Consolas"><span style="color: #0000ff">#include</span> <span
+                                style="color: red">&lt;nana/gui/wvl.hpp&gt;</span><br />
+                                <span style="color: blue">#include</span> <span style="color: red">&lt;nana/gui/widgets/treebox.hpp&gt;</span><br />
+                                <span style="color: blue">#include</span> <span style="color: red">&lt;nana/filesystem/file_iterator.hpp&gt;</span><br />
+                                <br />
+                                <br />
+                                <strong>class</strong> folder_tree<br />
+                                &nbsp; &nbsp; : <strong>public</strong> nana::gui::form<br />
+                                {<br />
+                                <strong>public</strong>:<br />
+                                &nbsp;&nbsp;&nbsp; typedef nana::gui::treebox&lt;int&gt;::node_type node_type;<br />
+                <br />
+                &nbsp; &nbsp; folder_tree()<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; : 
+                nana::gui::form(nana::gui::API::make_center(300, 300),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                appear::decorate&lt;appear::taskbar&gt;())<br />
+                                &nbsp; &nbsp; {<br />
+                                <br />
+                                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tree_.create(*this, <span style="color: navy">0</span>, <span style="color: navy">
+                                    0</span>, <span style="color: navy">300</span>, <span style="color: navy">300</span>);<br />
+                <br />
+                <span class="style1">#if defined(NANA_WINDOWS)</span><br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; node_type node = 
+                tree_.insert(STR(<span style="color: red">"C:"</span>),
+                                STR(<span style="color: red">"Local Drive(C:)"</span>), <span style="color: navy">0</span>);<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; nana::filesystem::file_iterator i(STR(<span style="color: red">"C:\\"</span>)),
+                                end;<br />
+                <span class="style1">#elif defined(NANA_LINUX)</span><br />
+                                <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Use a whitespace for the root key since the root under linux</span><br class="auto-style1" />
+                <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //is / character.</span><br />
+                                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; node_type node = 
+                tree_.insert(STR(<span style="color: red">&quot; &quot;</span>),
+                                STR(<span style="color: red">&quot;Root&quot;</span>), <span style="color: navy">0</span>);<br />
+                                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nana::filesystem::file_iterator i(STR(<span style="color: red">&quot;/&quot;</span>)),
+                                end;<br />
+                <span class="style1">#endif</span><br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <strong>for</strong>(; i != end; ++i)<br />
+                                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+                                &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <strong>if</strong>(<strong>false</strong> == i-&gt;directory)
+                                <strong>continue</strong>;<br />
+                                <br />
+                                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; tree_.insert(node, i-&gt;name, i-&gt;name, <span style="color: navy">
+                                    0</span>);<br />
+                                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; <strong>break</strong>;<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tree_.ext_event().expand = nana::make_fun(*this, 
+                &amp;folder_tree::_m_expand);<br />
+&nbsp;&nbsp;&nbsp; }<br />
+                <b>private</b>:<br />
+                                &nbsp; &nbsp; <strong>void</strong> _m_expand(nana::gui::window, node_type node, <strong>bool</strong> exp)<br />
+                                &nbsp; &nbsp; {<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; <strong>if</strong>(!exp) <strong>return</strong>; <span
+                                    style="color: #006633">//If this is contracted.</span><br />
+                                <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style1">//Windows supports the path separator &#39;/&#39;</span><br />
+                &nbsp; &nbsp; &nbsp; &nbsp; nana::string path = tree_.make_key_path(node, STR(<span
+                                    style="color: #ff0000">&quot;/&quot;</span>)) + STR(<span style="color: red">&quot;/&quot;</span>);<br />
+                <span class="auto-style1">
+                <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //Trim the whitespace at head of the path. So the code can be work</span><br class="auto-style1" />
+                <span class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //well in both Windows and Linux.</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nana::string::size_type path_start_pos = path.find_first_not_of(STR(<span class="auto-style2">&quot; &quot;</span>));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(path_start_pos != path.npos)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; path.erase(<span class="auto-style3">0</span>, path_start_pos);<br />
+                <br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family: Consolas"><span style="color: #006633">//Walk in the path directory
+                                    for sub directories.<br />
+                                </span>&nbsp; &nbsp; &nbsp; &nbsp; nana::filesystem::file_iterator i(path), end;<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; <strong>for</strong>(; i != end; ++i)<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>if</strong>(<strong>false</strong>
+                                == i-&gt;directory) <strong>continue</strong>; <span style="color: #006633">//If it
+                                    is not a directory.</span><br />
+                                <br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; node_type child = tree_.insert(node,
+                                i-&gt;name, i-&gt;name, <span style="color: navy">0</span>);<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>if</strong>(<span style="color: navy">0</span>
+                                == child) <strong>continue</strong>;<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family: Consolas">
+                            <span style="color: #006633">//Find a directory
+                                    in child directory, if there is a directory,<br />
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //insert
+                                    it into the child, just insert one node to indicate the<br />
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //node has a child
+                                    and an arrow symbol will be&nbsp;displayed in the<br />
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //front of the node.</span><br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nana::filesystem::file_iterator u(path
+                                + i-&gt;name);<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>for</strong>(; u != end; ++u)<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>if</strong>(<strong>false</strong>
+                                == u-&gt;directory) <strong>continue</strong>; </span><span style="font-family: Consolas">
+                                    <span style="color: #006633">//If it
+                                    is not a directory.<br />
+                                </span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tree_.insert(child,
+                                u-&gt;name, u-&gt;name, <span style="color: navy">0</span>);<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>break</strong>;<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+                                &nbsp; &nbsp; &nbsp; &nbsp; }<br />
+                                &nbsp; &nbsp; }<br />
+                                <strong>private</strong>:<br />
+                                &nbsp; &nbsp; nana::gui::treebox&lt;int&gt; tree_;<br />
+                                };<br />
+                                <br />
+                                <strong>int</strong> main()<br />
+                                {<br />
+                                &nbsp;&nbsp;&nbsp; folder_tree fdtree;<br />
+                                &nbsp; &nbsp; fdtree.show();<br />
+                                &nbsp; &nbsp; nana::gui::exec();<br />
+                                }</span><br />
+                <br />
+                <strong>Notes<br />
+                </strong>
+                <br />
+                1. The key string is case sensitive.
+                <br />
+                <br />
+                2. treebox&lt;T&gt;::ext_event_type. Nana.GUI event is a general-purpose, such 
+                as mouse_down, mouse_up, mouse_move event. But some widgets need some events 
+                that satisfies its own specifical demand, so the widget class provides an 
+                ext_event_type for this demand. Its definition is:<br />
+                <span style="font-family: Consolas"><br />
+                    <strong>struct</strong> ext_event_type<br />
+                    {<br />
+                    &nbsp; &nbsp; <strong>typedef</strong> <i>Implementation-Specified</i> node_type;<br />
+                    &nbsp; &nbsp; <br />
+                    &nbsp; &nbsp; 
+                nana::functor&lt;<strong>void</strong>(nana::gui::window, node_type, <strong>bool</strong> exp)&gt; 
+                expand;&nbsp; //Expands or shrinks an item, exp is true if it is expanded.<br />
+                    &nbsp; &nbsp; nana::functor&lt;<strong>void</strong>(nana::gui::window, node_type, <strong>bool</strong> set)&gt; 
+                selected; //Selects an item, set is true if it is selected.<br />
+                    };<br />
+                </span>
+                <br />
+                If a node is expanded or 
+                shrinked, the expand method will be called, and the 3rd
+                parameter specifies whether the node is expanded.<br />
+                If a node is selected or unselected, the selected method will be called, and the
+                3rd parameter specifies whether the node is selected.<br />
+                <br />
+                3. The definition of node_image_type<br />
+                <br />
+                struct node_image_type<br />
+                {<br />
+&nbsp;&nbsp;&nbsp; nana::paint::image normal;<br />
+&nbsp;&nbsp;&nbsp; nana::paint::image highlighted;<br />
+&nbsp;&nbsp;&nbsp; nana::paint::image expanded;<br />
+                };<br />
+                <br />
+                <br />
+                <strong>See also</strong><br />
+                <br />
+                None.<br />
+                <br />
+                <hr style="font-size: 10pt" />
+                Move to <a href="../index.htm">The Nana Programmer's Guide Main Page</a></td>
+        </tr>
+        <tr style="font-size: 10pt">
+            <td style="height: 21px">
+            </td>
+        </tr>
+        <tr style="font-size: 10pt">
+            <td style="height: 21px">
+                &nbsp;</td>
+        </tr>
+    </table>
+
+    
+    
+
+</body>
+</html>

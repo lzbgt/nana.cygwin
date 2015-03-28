@@ -1,0 +1,678 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>The Nana Programmer's Guide</title>
+    <style type="text/css">
+        .auto-style1 {
+            color: #0033CC;
+        }
+        .auto-style2 {
+            color: #009933;
+        }
+        .auto-style3 {
+            color: #FF0000;
+        }
+        .auto-style4 {
+            font-family: "Courier New";
+        }
+    </style>
+</head>
+<body>
+    <table style="font-family:Consolas;font-size:10pt; width: 100%; position: absolute; left: 0px; border-top-style: none; border-right-style: none; border-left-style: none; top: 0px; border-bottom-style: none;">
+        <tr>
+            <td style="height: 70px; background-color: #ffcc66; text-align: right">
+                <span style="font-size: 16pt"><strong>Nana C++ Library &nbsp; </strong></span>
+                <br />
+                <strong>open-source C++ framework project&nbsp; </strong><br />
+                <strong>The Programmer's Guide&nbsp; </strong>
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 21px">
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 21px; font-family: Consolas;font-size: 10pt">
+                <strong><span style="font-size: 16pt">nana::gui::listbox</span></strong><br />
+                <br />
+                <strong>
+                Description<br />
+                </strong>
+                <br />
+                The listbox is a rectangle containing a list of strings from which the user can
+                select.<br />
+                <br />
+                <strong>Model
+                of<br />
+                </strong>
+                <br />
+                <a href="./widget_window.htm">Widget Window</a>&nbsp;<br />
+                <br />
+                <strong>Public base classes<br />
+                </strong>
+                <br />
+                <a href="./widget_object_widget_tag.htm">class widget_object&lt;widget_tag, DrawerTrigger&gt;:
+                    public
+                widget</a><br />
+                <a href="any_objective.htm">concepts::any_objective</a><br />
+                <br />
+                <strong>Typedefs</strong><br />
+                <br />
+                <table style="border-right: 1px outset; border-top: 1px outset; border-left: 1px outset;
+                    width: 100%; border-bottom: 1px outset">
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            template&lt;typename T&gt; class resolver_interface</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            An interface for the item resolver. (See Note 1)</td>
+                    </tr>
+                </table>
+                <br />
+                <strong>Members</strong><br />
+                <br />
+                <table style="border-right: 1px outset; border-top: 1px outset; border-left: 1px outset;
+                    width: 100%; border-bottom: 1px outset">
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            listbox()</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            The default construction.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            listbox(window wd, bool visible)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Creates a listbox.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40% padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            listbox(window wd, const <a href="../basic_class/rectangle.htm" target="_blank">rectangle</a>&amp; r = rectangle(), bool visible = true)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Ditto.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            <b>template</b>&lt;<b>typename</b> T&gt;<br />
+                            <b>void</b> anyobj(size_type catg, size_type index, <b>const</b> T&amp; t)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Sets an object for the specified item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            <b>template</b>&lt;<b>typename</b> T&gt;<br />
+                            T* anyobj(size_type categ, size_type index)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Returns the address of the object.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            <b>template</b>&lt;<b>typename</b> T&gt;<br />
+                            T* anyobj(size_type categ, size_type index) <b>const</b></td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Returns the address of the object.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void append_categ(const nana::string&amp; text)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Append a category.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void append_header(const nana::string&amp; text, unsigned width)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Append an item into header column with the text and the specified width.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void append_item(const nana::string&amp; text)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Append an item to default category.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void append_item(size_type categ, const nana::string&amp; text)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Append an item to a specified category.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void auto_draw(bool)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Set the listbox auto-draw state. If it is true, the listbox will redraw automatically
+                            after an operation.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void checkable(bool)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Enables or disables the checkable state of the listbox.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            bool checked(size_type index) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Returns the checked state of a specified item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            bool checked(size_type categ, size_type index) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Returns the checked state of a specified item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void checked(std::vector&lt;std::pair&lt;size_type, size_type&gt; &gt;&amp; cnt)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Returns the items which are checked.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void checked(size_type categ, size_type index, bool)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Sets the checked state of a specified item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void clear(size_t categ)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Removes the items which are in a specified category.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void clear()</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Removes the items of all categories.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void erase(size_t categ, size_t item)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Erases an item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void erase(size_type categ)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Erases a category.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void erase()</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Erases all categories.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void move_select(bool upwards)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Selects an item besides the current selected item.&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void item_background(size_type categ, size_type item, nana::color_t color)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Sets the background color of a specified item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            nana::color_t item_background(size_type cat, size_type item) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Retrieves the background color of a specified item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void item_foreground(size_type cat, size_type item, nana::color_t color)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Sets the foreground color of a specified item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            nana::color item_foreground(size_type cat, size_type item) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Retrieves the foreground color of a specified item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            nana::string item_text(size_type cat, size_type index, size_type sub) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Get the text of an item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void set_item_text(size_type index, size_type subindex, const nana::string&amp; text)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Set the text of an item that is in default category.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void set_item_text(size_type categ, size_type index, size_type subindex, const nana::string&amp;
+                            text)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Set the text of an item of a specified category.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            set_sort_compare</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Refer to the C++03/11 members.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            bool selected(size_t item) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Returns true if the item in default category is selected by user.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            bool selected(size_t categ, size_t item) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Returns true if the item in a specified category is selected by user.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void selected(std::vector&lt;std::pair&lt;size_t, size_t&gt; &gt;&amp; cont) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Get the indexs of all the selected items.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void selected(size_t categ, size_t item, bool sl)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Selects or unselects the specified item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void show_header(bool)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Set the visible of header column.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            size_type size_categ() const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Get the number of category item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            size_type size_item() const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Returns the number of default category item.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            size_type size_item(size_type categ) const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Returns the number of items which are the specified cateory.</td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            bool visible_header() const</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Retrieves the visible of header column.</td>
+                    </tr>
+                </table>
+                <br />
+                <strong>C++03 Members</strong><br />
+                <br />
+                <table style="border-right: 1px outset; border-top: 1px outset; border-left: 1px outset;
+                    width: 100%; border-bottom: 1px outset">
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void set_sort_compare(size_type subindex, nana::functor&lt;bool(<br />
+&nbsp;&nbsp; const nana::string&amp;,<br />
+&nbsp;&nbsp; nana::any*,<br />
+&nbsp;&nbsp; const nana::string&amp;,<br />
+&nbsp;&nbsp; nana::any*, bool reverse)&gt;&amp; strick_ordering)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Sets a strick weak ordering comparer for a column. (See Note 4)</td>
+                    </tr>
+                </table>
+                <br />
+                <strong>C++11 Members</strong><br />
+                <br />
+                <table style="border-right: 1px outset; border-top: 1px outset; border-left: 1px outset;
+                    width: 100%; border-bottom: 1px outset">
+                    <tr>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 40%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            void set_sort_compare(size_type subindex,<br />
+                            std::function&lt;bool(<br />
+&nbsp;&nbsp; const nana::string&amp;,<br />
+&nbsp;&nbsp; nana::any*,<br />
+&nbsp;&nbsp; const nana::string&amp;,<br />
+&nbsp;&nbsp; nana::any*, bool reverse)&gt; strick_ordering)</td>
+                        <td style="border-right: 1px inset; padding-right: 0px; border-top: 1px inset; padding-left: 0px;
+                            padding-bottom: 0px; margin: 0px; border-left: 1px inset; width: 60%; padding-top: 0px;
+                            border-bottom: 1px inset; height: 20px">
+                            Sets a strick weak ordering comparer for a column. (See Note 4)</td>
+                    </tr>
+                </table>
+                <br />
+                <strong>File</strong><br />
+                <br />
+                nana/gui/widgets/listbox.hpp<br />
+                <br />
+                <strong>Notes<br />
+                </strong>
+                <br />
+                1, The resolver is used to resolute an object of the specified type for a listbox item.<br />
+                <br />
+                <span style="font-family: 'Courier New'">
+                <span class="auto-style1">#include</span> &lt;nana/gui/wvl.hpp&gt;<br />
+                <span class="auto-style1">#include</span> &lt;nana/gui/widgets/listbox.hpp&gt;<br />
+                <br />
+                <strong>struct</strong> person<br />
+                {<br />
+&nbsp;&nbsp;&nbsp; nana::string name;<br />
+&nbsp;&nbsp;&nbsp; <strong>bool</strong> gender;<br />
+&nbsp;&nbsp;&nbsp; unsigned age;<br />
+                };<br />
+                <br />
+                <strong>class</strong> resolver<br />
+&nbsp;&nbsp;&nbsp; : <strong>public</strong> nana::gui::listbox::resolver_interface&lt;person&gt;<br />
+                {<br />
+&nbsp;&nbsp;&nbsp; nana::string decode(std::size_t i, <strong>const</strong> person&amp; pr) <strong>const</strong><br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; std::stringstream ss;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>switch</strong>(i)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>case</strong> 0:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>return</strong> pr.name;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>case</strong> 1:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>return</strong> (pr.gender ? STR(<span class="auto-style3">&quot;Male&quot;</span>) : STR(<span class="auto-style3">&quot;Female&quot;</span>));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>case</strong> 2:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ss&lt;&lt;pr.age;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>return</strong> nana::charset(ss.str());<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>return</strong> nana::string();<br />
+&nbsp;&nbsp;&nbsp; }<br />
+                <br />
+&nbsp;&nbsp;&nbsp; <strong>void</strong> encode(person&amp; pr, std::size_t i, <strong>const</strong> nana::string&amp; s)<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; std::stringstream ss;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>switch</strong>(i)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>case</strong> 0:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pr.name = s;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>break</strong>;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>case</strong> 1:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pr.gender = (s == STR(<span class="auto-style3">&quot;Male&quot;</span>));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>break</strong>;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>case</strong> 2:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ss&lt;&lt;static_cast&lt;std::string&gt;(nana::charset(s));<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ss&gt;&gt;pr.age;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>break</strong>;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; }<br />
+                }<br />
+                <br />
+                <strong>int</strong> main()<br />
+                {<br />
+&nbsp;&nbsp;&nbsp; <strong>using namespace</strong> nana::gui;<br />
+                <br />
+&nbsp;&nbsp;&nbsp; form fm;<br />
+&nbsp;&nbsp;&nbsp; listbox&nbsp; lb(fm, nana::rectangle(10, 10, 280, 120));<br />
+&nbsp;&nbsp;&nbsp; lb.append_header(STR(<span class="auto-style3">&quot;Name&quot;</span>), 100);<br />
+&nbsp;&nbsp;&nbsp; lb.append_header(STR(<span class="auto-style3">&quot;Gender&quot;</span>), 60);<br />
+&nbsp;&nbsp;&nbsp; lb.append_header(STR(<span class="auto-style3">&quot;Age&quot;</span>), 60);<br />
+                <br />
+&nbsp;&nbsp;&nbsp; lb.resolver(resolver()); <span class="auto-style2">//Pass the user defined resolver to the listbox</span><br />
+                <br />
+&nbsp;&nbsp;&nbsp; person pr;<br />
+&nbsp;&nbsp;&nbsp; pr.name = STR(<span class="auto-style3">&quot;Peter&quot;</span>);<br />
+&nbsp;&nbsp;&nbsp; pr.gender = <strong>true</strong>;<br />
+&nbsp;&nbsp;&nbsp; pr.age = 10;<br />
+&nbsp;&nbsp;&nbsp; lb.append(0, pr); <span class="auto-style2">&nbsp;//person to item. resolver::decode() is required</span><br />
+&nbsp;&nbsp;&nbsp;
+                <br />
+&nbsp;&nbsp;&nbsp; lb.item(0, 0, pr); <span class="auto-style2">//item to person. resolver::encode() is required</span><br />
+                <br />
+&nbsp;&nbsp;&nbsp; fm.show();<br />
+&nbsp;&nbsp;&nbsp; exec();<br />
+                }<br />
+                </span>
+                <br />
+                2, The any_objective of listbox is 2-Dimension indexing. The first dimension is for category, and the second one is for the item of a specified category.<br />
+                <br />
+                <span style="font-family: 'Courier New'">
+                <strong>int</strong> main()<br />
+                {<br />
+&nbsp;&nbsp;&nbsp; <strong>using</strong> <strong>namespace</strong> nana::gui;<br />
+&nbsp;&nbsp;&nbsp; form fm;<br />
+&nbsp;&nbsp;&nbsp; listbox lb(fm, nana::rectangle(10, 10, 280, 120));<br />
+&nbsp;&nbsp;&nbsp; lb.append_header(STR(<span class="auto-style3">&quot;Header&quot;</span>), 200);<br />
+&nbsp;&nbsp;&nbsp; lb.append_item(STR(<span class="auto-style3">&quot;int&quot;</span>));<br />
+&nbsp;&nbsp;&nbsp; lb.append_item(STR(<span class="auto-style3">&quot;double&quot;</span>));<br />
+                <br />
+&nbsp;&nbsp;&nbsp; lb.anyobj(0, 0, 10);<br />
+&nbsp;&nbsp;&nbsp; lb.anyobj(0, 1, 0.1);<br />
+                <br />
+&nbsp;&nbsp;&nbsp; <strong>int</strong> * pi = lb.anyobj&lt;<strong>int</strong>&gt;(0, 0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style2">//it returns a nullptr if there is not an int object is specified.</span><br />
+&nbsp;&nbsp;&nbsp; <strong>double</strong> * pd = lb.anyobj&lt;<strong>double</strong>&gt;(0, 1);&nbsp; <span class="auto-style2">//it returns a nullptr if there is not an double object is specified.</span><br />
+                <br />
+&nbsp;&nbsp;&nbsp; fm.show();<br />
+&nbsp;&nbsp;&nbsp; exec();<br />
+                }<br />
+                </span>
+                <br />
+                <br />
+                3, nana::gui::listbox creates the category 0 by default. These member functions
+                without the categ parameter operate the items that are belong to category 0. 
+                <br />
+                <br />
+                <br />
+                4, A sort compare is used for sorting the items. It is a strick weak ordering comparer that must meet the requirement:<br />
+                Irreflexivity(comp(x, x) returns false) and antisymmetry(comp(a, b) != comp(b, a) returns true)<br />
+                <br />
+                A simple example.<br />
+                <br />
+                <span class="auto-style4"><strong>bool</strong> sort_compare(<strong>const</strong> nana::string&amp; s1, nana::any*, <strong>const</strong> nana::string&amp; s2, nana::any*, bool reverse)<br />
+                {<br />
+&nbsp;&nbsp;&nbsp; <strong>return</strong> (reverse ? s1 &gt; s2 : s1 &lt; s2);<br />
+                }<br />
+                <br />
+                listbox.set_sort_compare(0, sort_compare);</span><br />
+                <br />
+                The listbox supports attaching a customer&#39;s object for each item, therefore the items can be sorted by comparing these customer&#39;s object.<br />
+                <br />
+                <span class="auto-style4"><strong>bool</strong> sort_compare(<strong>const</strong> nana::string&amp;, nana::any* o1, <strong>const</strong> nana::string&amp;, nana::any* o2, bool reverse)<br />
+                {<br />
+&nbsp;&nbsp;&nbsp; <strong>if</strong>(o1 &amp;&amp; o2) <span class="auto-style2">//some items may not attach a customer object.</span><br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>int</strong> * i1 = o1-&gt;get&lt;int&gt;();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>int</strong> * i2 = o2-&gt;get&lt;int&gt;();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>return</strong> (i1 &amp;&amp; i2 &amp;&amp; (reverse ? *i1 &gt; *i2 : *i1 &lt; *i2)); <span class="auto-style2">//some types may not be int.</span><br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; <strong>return</strong> <strong>false</strong>;<br />
+                }<br />
+                <br />
+                listbox.anyobj(0, 0, 10); <span class="auto-style2">//the type of customer&#39;s object is int.</span><br />
+                listbox.anyobj(0, 0, 20);</span><br />
+                <br />
+                <br />
+                <strong>
+                    <br />
+                    See also</strong><br />
+                <br />
+                None.<br />
+                <br />
+                <hr />
+                Move to <a href="../index.htm">The Nana Programmer's Guide Main Page</a></td>
+        </tr>
+        <tr>
+            <td style="height: 21px">
+            </td>
+        </tr>
+    </table>
+
+    
+    
+
+</body>
+</html>
